@@ -1,0 +1,45 @@
+/* wishlist.css */
+
+/* Expandable navbar */
+.expandable-nav {
+    display: none;
+    position: fixed;
+    top: 50px;
+    right: 0;
+    background-color: #f4e770;
+    padding: 10px;
+    border-radius: 5px 0 0 5px;
+}
+
+.expandable-nav.show {
+    display: block;
+}
+
+.expandable-nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+
+/* Wishlist popup */
+.wishlist-popup {
+    display: none;
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.wishlist-popup.show {
+    display: block;
+}
+
+.wishlist-icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: red;
+}
