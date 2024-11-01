@@ -1,11 +1,14 @@
-
-
+/*Yuanhan Huang, yh22fv, 7642440*/
 
 /* General Style */
 body {
     background-color: white;
     font-family: Arial, sans-serif;
     font-size: 1rem;
+}
+
+section {
+    font-size: 15px;
 }
 
 header {
@@ -55,7 +58,6 @@ img {
     height: auto; /* Responsive Image Adjustments */
 }
 
-
 nav ul {
     list-style-type: none;
     padding: 0;
@@ -80,14 +82,23 @@ nav ul li a:hover {
     color: rgb(0, 0, 0);
 }
 
-/* Mobile Navigation */
 @media (max-width: 576px) {
     nav ul {
-        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap; /* Allows items to wrap to the next row */
+        justify-content: center;
+        padding: 0;
     }
+
     nav ul li {
-        width: 100%;
+        width: 45%; /* Adjusts each item to take up about half of the width */
         text-align: center;
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        padding: 8px 12px; /* Adjusts padding for smaller screens */
+        font-size: 14px; /* Reduces font size slightly for better fit */
     }
 }
 
