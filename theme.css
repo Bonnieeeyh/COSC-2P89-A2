@@ -11,6 +11,10 @@ section {
     font-size: 15px;
 }
 
+p {
+    font-size: 15px;
+}
+
 header {
     background-color: rgb(244, 222, 126);
 }
@@ -51,6 +55,11 @@ h4 {
     font-weight: bold;
 }
 
+h5 {
+    font-size: 13px;
+    text-align: center;
+}
+
 img {
     display: block;
     margin: 0 auto;
@@ -84,8 +93,8 @@ nav ul li a:hover {
 
 @media (max-width: 576px) {
     nav ul {
-        display: flex;
-        flex-wrap: wrap; /* Allows items to wrap to the next row */
+        flex-direction: column;
+        gap: 10px;
         justify-content: center;
         padding: 0;
     }
@@ -172,6 +181,7 @@ li {
     border-bottom: 1px solid #ccc; 
     padding: 10px 2; 
     cursor: pointer; 
+    margin-left: 1%;
 }
 
 .faq-item h3 {
@@ -189,6 +199,7 @@ li {
     padding: 10px 5; 
     font-size: 16px; 
     color: #323131;
+    margin-left: 1%;
 }
 
 .toggle-icon {
@@ -357,7 +368,6 @@ button.wishlist-add:hover {
     background-color: rgb(224, 154, 42); 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-
 
 
 
