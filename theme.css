@@ -111,10 +111,6 @@ footer {
     width: 100%;
 }
 
-.fancy { 
-    font-family: "Junicode", "Comic Sans MS", cursive, sans-serif; 
-}
-
 section {
     background-color: rgb(238, 245, 185);
     padding: 8pt;
@@ -140,6 +136,14 @@ p {
 li {
     font-size: 18px;
     font-weight: bold;
+}
+
+@font-face {
+    font-family: 'ComicRelief';
+    src: url('ComicRelief.ttf');
+}
+.fancy { 
+    font-family: 'ComicRelief', cursive, sans-serif; 
 }
 
 @font-face {
