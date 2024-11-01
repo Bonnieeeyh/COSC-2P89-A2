@@ -104,7 +104,7 @@ document.addEventListener("DOMContentLoaded", function() {
             popupContent.innerHTML = `
                 <img src="${product.img}" alt="${product.name}" style="width: 150px; height: auto; margin-bottom: 10px;"/>
                 <h4>${product.name}</h4>
-                <p>${actionText}</p>
+                <h5>${actionText}</h5>
                 <button id="view-wishlist" class="wishlist-link">View Wish List</button>
                 <button id="close-popup" class="wishlist-close">Close</button>
             `;
