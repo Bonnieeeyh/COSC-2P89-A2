@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Products Overview</title>
+    <link rel="stylesheet" type="text/css" href="theme.css"/>
+    <script src="wishlist.js" defer></script>
+    <style>
+        .product-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .product-card {
+            width: 190px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            margin: 10px;
+        }
+
+        .product-card a {
+            display: block;
+            text-decoration: none; 
+            color: inherit; 
+        }
+
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .product-title {
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+
+        .product-price {
+            color: #007b5e;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <!-- Normal Logo Bar -->
+    <div id="logo-bar" class="logo-bar">
+        <img src="shop_logo.png" width="400" alt="Shop Logo"/>
+        <a href="wishlist.html">
+            <button class="wishlist-icon" >
+                <img src="wishlist_logo.png" />
+                <span class="tooltip">Wish List</span>
+            </button>
+        </a>
+    </div>
+
+    <!-- Fixed Logo Bar -->
+    <div id="fixed-logo-bar" class="fixed-header">
+        <img src="shop_logo.png"  width="300" alt="Shop Logo"/>
+        <a href="wishlist.html">
+            <button class="wishlist-icon" >
+                <img src="wishlist_logo.png" />
+                <span class="tooltip">Wish List</span>
+            </button>
+        </a>
+    </div>
+
+    <header class="header">
+        <div class="fancy">
+            <h1>Welcome to Bonnie's Handmade Shop!</h1>
+        </div>
+    </header>
+    <br>
+    <div class="fancy">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <br>
+        <h2>Products Overview</h2>
+
+        <div class="product-container">
+            <!--Product 1: Phone Cases-->
+            <div class="product-card" data-name="Phone Cases" data-img="PhoneCase1.jpg" data-price="$59.99">
+                <a href="product1.html">
+                    <img src="PhoneCase1.jpg"/>
+                    <div class="product-title">Phone Cases</div>
+                    <div class="product-price">$59.99</div>
+                </a>
+                <button class="wishlist-icon ${isInWishlist ? 'added' : ''}" onclick="addToWishlist(this)">
+                    <img src="wishlist_logo.png"/>
+                    <span class="tooltip">Add to Wish List</span>
+                </button>
+            </div>
+            
+            <!--Product 2: Phone Stands-->   
+            <div class="product-card" data-name="Phone Stands" data-img="PhoneStands1.JPG" data-price="$99.99">
+                <a href="product2.html">
+                    <img src="PhoneStands1.JPG"/>
+                    <div class="product-title">Phone Stands</div>
+                    <div class="product-price">$99.99</div>
+                </a>
+                <button class="wishlist-icon ${isInWishlist ? 'added' : ''}" onclick="addToWishlist(this)">
+                    <img src="wishlist_logo.png"/>
+                    <span class="tooltip">Add to Wish List</span>
+                </button>
+            </div>
+            
+            <!--Product 3: Wands--> 
+            <div class="product-card" data-name="Wands" data-img="Wand1.jpg" data-price="$69.99">
+                <a href="product3.html">
+                    <img src="Wand1.jpg"/>
+                    <div class="product-title">Wands</div>
+                    <div class="product-price">$69.99</div>
+                </a>
+                <button class="wishlist-icon ${isInWishlist ? 'added' : ''}" onclick="addToWishlist(this)">
+                    <img src="wishlist_logo.png"/>
+                    <span class="tooltip">Add to Wish List</span>
+                </button>
+            </div>  
+            
+            <!--Product 4: Customization-->   
+            <div class="product-card" data-name="Customization" data-img="Customize1.jpg" data-price="Price Varies">
+                <a href="product4.html">
+                    <img src="Customize1.jpg"/>
+                    <div class="product-title">Customization</div>
+                    <div class="product-price">Price Varies</div>
+                </a>
+                <button class="wishlist-icon ${isInWishlist ? 'added' : ''}" onclick="addToWishlist(this)">
+                    <img src="wishlist_logo.png"/>
+                    <span class="tooltip">Add to Wish List</span>
+                </button>
+            </div>
+
+        </div>
+        
+        <div id="wishlist-popup" class="wishlist-popup">
+            <div id="wishlist-popup-content"></div>
+        </div>
+    </div>
+
+    <br><br>
+    <footer>
+        <small>Legal information: Yuanhan Huang yh22fv © 2024 (All media used made by myself)
+            Font downloaded from: https://fontlibrary.org/en/catalogue
+        </small>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const fixedLogoBar = document.getElementById('fixed-logo-bar');
+            const logoBar = document.getElementById('logo-bar');
+            const header = document.querySelector('.header');
+
+            if (window.scrollY > header.offsetHeight) {
+                fixedLogoBar.style.display = 'flex';
+                logoBar.style.display = 'none';
+            } else {
+                fixedLogoBar.style.display = 'none';
+                logoBar.style.display = 'flex';
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
